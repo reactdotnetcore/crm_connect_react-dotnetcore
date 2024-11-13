@@ -1,6 +1,9 @@
 import React from 'react'
 
 export default function Header() {
+    const toggleSidebar = () => {
+        document.body.classList.toggle('toggle-sidebar');
+      };
   return (
       <>
           <header id="header" className="header fixed-top d-flex align-items-center">
@@ -9,7 +12,7 @@ export default function Header() {
                       <img src="assets/img/logo.png" alt="Logo" />
                       <span className="d-none d-lg-block">NiceAdmin</span>
                   </a>
-                  <i className="bi bi-list toggle-sidebar-btn"></i>
+                  <i className="bi bi-list toggle-sidebar-btn" onClick={toggleSidebar}></i>
               </div>
 
               <div className="search-bar">
