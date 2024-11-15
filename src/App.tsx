@@ -33,7 +33,7 @@ function App() {
     <>
       <Router>
         <Routes>
-          <Route path="/login" element={<Login/>} />
+          <Route path="/login" element={<Login setIsAuthenticated={setIsAuthenticated} />} />
           {/* <Route path="/register" element={<Register />} /> */}
           <Route path="/" element={<ProtectedRoute isAuthenticated={isAuthenticated}><Layout /></ProtectedRoute>} />
         </Routes>
