@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Routes, Route, Navigate  } from 'react-router-
 import Layout from './Layout';
 import Login from './Authentication/Login';
 import { resolve } from 'path';
+import Register from './Authentication/Register';
 
 interface ProtectedRouteProps {
   isAuthenticated: boolean;
@@ -34,7 +35,7 @@ function App() {
       <Router>
         <Routes>
           <Route path="/login" element={<Login setIsAuthenticated={setIsAuthenticated} />} />
-          {/* <Route path="/register" element={<Register />} /> */}
+          <Route path="/register" element={<Register/>} />
           <Route path="/" element={<ProtectedRoute isAuthenticated={isAuthenticated}><Layout /></ProtectedRoute>} />
         </Routes>
       </Router>
